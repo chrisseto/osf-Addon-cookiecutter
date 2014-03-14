@@ -2,13 +2,13 @@ from . import model
 from . import routes
 from . import views
 
-MODELS = [model.Addon{{cookiecutter.short_name}}NodeSettings]  # model.Addon{{cookiecutter.short_name}}UserSettings
-#USER_SETTINGS_MODEL = model.AddonS3UserSettings
-NODE_SETTINGS_MODEL = model.AddonS3NodeSettings
+MODELS = [model.Addon{{cookiecutter.short_name | capitalize}}NodeSettings]
+#USER_SETTINGS_MODEL = model.AddonUserSettings
+NODE_SETTINGS_MODEL = model.Addon{{ cookiecutter.short_name | capitalize }}NodeSettings
 
 ROUTES = [routes.settings_routes]
 
-SHORT_NAME = '{{cookiecutter.short_name}}'
+SHORT_NAME = '{{cookiecutter.short_name | lower}}'
 FULL_NAME = '{{cookiecutter.full_name}}'
 
 OWNERS = ['node']  # user
@@ -21,7 +21,7 @@ ADDED_TO = {
 VIEWS = []  # page, widget
 CONFIGS = ['node']  # User
 
-CATEGORIES = ['{{cookiecutter.categories}}']
+CATEGORIES = [{{cookiecutter.categories}}]
 
 INCLUDE_JS = {
     'widget': [],
