@@ -1,5 +1,5 @@
  <!-- An example log template -->
- <script type="text/html" id="{{cookicutter.short_name}}_file_added">
+ <script type="text/html" id="{{cookiecutter.short_name}}_file_added">
 added file
 {%raw%}
 <a class="overflow log-file-link" data-bind="click: NodeActions.addonFileRedirect">{{ params.path }}</a> to

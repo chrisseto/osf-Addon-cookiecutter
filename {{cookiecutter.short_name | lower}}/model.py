@@ -39,7 +39,6 @@ class Addon{{ cookiecutter.short_name | capitalize }}NodeSettings(AddonNodeSetti
             params={
                 'project': node.parent_id,
                 'node': node._id,
-                'folder': folder
             },
             auth=auth,
         )
@@ -70,7 +69,7 @@ class Addon{{ cookiecutter.short_name | capitalize }}NodeSettings(AddonNodeSetti
 
     def before_remove_contributor_message(self, node, removed):
         """Return warning text to display if removed contributor is the user
-        who authorized the Dropbox addon
+        who authorized the {{cookiecutter.short_name | capitalize }} addon
         """
         if self.user_settings and self.user_settings.owner == removed:
             # TODO
@@ -85,7 +84,7 @@ class Addon{{ cookiecutter.short_name | capitalize }}NodeSettings(AddonNodeSetti
 
         :return: A tuple of the form (cloned_settings, message)
         """
-        clone, message = super(DropboxNodeSettings, self).after_register(
+        clone, message = super({{cookiecutter.short_name | capitalize }}NodeSettings, self).after_register(
             node, registration, user, save=False
         )
         # Copy user_settings and add registration data
@@ -102,7 +101,7 @@ class Addon{{ cookiecutter.short_name | capitalize }}NodeSettings(AddonNodeSetti
 
         :return: A tuple of the form (cloned_settings, message)
         """
-        clone, _ = super(DropboxNodeSettings, self).after_fork(
+        clone, _ = super({{cookiecutter.short_name | capitalize }}NodeSettings, self).after_fork(
             node=node, fork=fork, user=user, save=False
         )
 
@@ -119,7 +118,7 @@ class Addon{{ cookiecutter.short_name | capitalize }}NodeSettings(AddonNodeSetti
         return clone, message
 
     def after_remove_contributor(self, node, removed):
-        """If the removed contributor was the user who authorized the Dropbox
+        """If the removed contributor was the user who authorized the {{cookiecutter.short_name | capitalize }}
         addon, remove the auth credentials from this node.
         Return the message text that will be displayed to the user.
         """
