@@ -14,12 +14,7 @@ ROUTES = [routes.api_routes, routes.web_routes]
 SHORT_NAME = '{{cookiecutter.short_name | lower}}'
 FULL_NAME = '{{cookiecutter.full_name}}'
 
-OWNERS = ['node']  # can include any of ['user', 'node']
-
-ADDED_TO = {
-    'user': False,
-    'node': False,
-}
+OWNERS = ['user', 'node']  # can include any of ['user', 'node']
 
 VIEWS = []  # page, widget
 CONFIGS = ['node']  # any of ['user', 'node']

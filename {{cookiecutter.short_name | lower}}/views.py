@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from framework import request
 from framework.auth import get_current_user
 from website.project.decorators import (must_be_valid_project,
     must_have_addon, must_have_permission, must_not_be_registration

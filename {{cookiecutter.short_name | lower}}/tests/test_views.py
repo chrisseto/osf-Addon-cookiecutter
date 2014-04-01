@@ -22,4 +22,3 @@ class Test{{cookiecutter.short_name | capitalize}}Views(DbTestCase):
         res = self.app.get(url, auth=self.user.auth)
         assert_equal(res.status_code, 200)
 
-

@@ -1,0 +1,1 @@
+# Requirements for the {{cookiecutter.short_name}} add-on
