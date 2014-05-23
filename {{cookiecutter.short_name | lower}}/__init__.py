@@ -19,7 +19,7 @@ OWNERS = ['user', 'node']  # can include any of ['user', 'node']
 VIEWS = []  # page, widget
 CONFIGS = ['node']  # any of ['user', 'node']
 
-CATEGORIES = [{{cookiecutter.categories}}]
+CATEGORIES = ['{{cookiecutter.categories}}']
 
 INCLUDE_JS = {
     'page': [],

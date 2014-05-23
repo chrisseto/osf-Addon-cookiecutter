@@ -73,6 +73,7 @@ api_routes = {
             views.{{cookiecutter.short_name}}_import_user_auth,
             json_renderer
         ),
+    ],
 
     ## Your routes here
 
