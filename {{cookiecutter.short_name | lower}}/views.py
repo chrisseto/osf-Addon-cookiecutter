@@ -4,7 +4,7 @@ from framework.auth import get_current_user
 from website.project.decorators import (must_be_valid_project,
     must_have_addon, must_have_permission, must_not_be_registration
 )
-
+from .utils import serialize_settings
 
 # TODO
 @must_be_valid_project
