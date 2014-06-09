@@ -13,9 +13,10 @@ def {{cookiecutter.short_name}}_config_get(node_addon, **kwargs):
     """API that returns the serialized node settings."""
     user = get_current_user()
     return {
-        'result': 'TODO',
+        'result': serialize_settings(node_addon, user),
     }, http.OK
 
+    
 @must_have_permission('write')
 @must_not_be_registration
 @must_have_addon('{{cookiecutter.short_name}}', 'node')
