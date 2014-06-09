@@ -4,7 +4,7 @@ from framework.auth import get_current_user
 from website.project.decorators import (must_be_valid_project,
     must_have_addon, must_have_permission, must_not_be_registration
 )
-
+from .utils import serialize_settings
 
 # TODO
 @must_be_valid_project
@@ -13,9 +13,10 @@ def {{cookiecutter.short_name}}_config_get(node_addon, **kwargs):
     """API that returns the serialized node settings."""
     user = get_current_user()
     return {
-        'result': 'TODO',
+        'result': serialize_settings(node_addon, user),
     }, http.OK
 
+    
 @must_have_permission('write')
 @must_not_be_registration
 @must_have_addon('{{cookiecutter.short_name}}', 'node')
