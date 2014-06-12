@@ -12,7 +12,7 @@ def serialize_urls(node_settings):
 
 def serialize_settings(node_settings, current_user):
     """
-    View helper that returns a dictionary representation of a {{cookiecutter.short_name.capitalize()}}NodeSettings record. Provides the return value for the {{cookiecutter.short_name config endpoints.
+    View helper that returns a dictionary representation of a {{cookiecutter.short_name.capitalize()}}NodeSettings record. Provides the return value for the {{cookiecutter.short_name}} config endpoints.
     """
     user_settings = node_settings.user_settings
     user_is_owner = user_settings is not None and (
